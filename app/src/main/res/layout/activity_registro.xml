@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5C2E0"
+    android:fillViewport="true"
+    tools:context=".registro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Tarjeta Blanca Central -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <!-- Logo RedHuellitas -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_redhuellitas_nuevo_background"
+                    android:contentDescription="Logo" />
+
+                <!-- Avatar / Añade tu foto -->
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:contentDescription="@string/Avatar"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_image"
+                    app:tint="#5D123A" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/Añade_tu_foto"
+                    android:textColor="#5D123A"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- Campo: Nombre completo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/Icono_nombre"
+                        android:src="@drawable/ic_user"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/Nombre_completo"
+                        android:inputType="textPersonName"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#646464"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Campo: Correo electrónico -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/Correo_electrónico_desc"
+                        android:src="@android:drawable/ic_dialog_email"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etCorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/Correo_electrónico"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#646464"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Campo: Contraseña -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/Icono_contraseña_descr"
+                        android:src="@android:drawable/ic_lock_lock"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etContrasena"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#8A8A8A"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Campo: Teléfono -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/Icono_teléfono_descr"
+                        android:src="@drawable/ic_phone"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/Teléfono"
+                        android:inputType="phone"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#8A8A8A"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Banner Informativo -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#9B5178"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/opc"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <!-- Opciones de Selección (RadioGroup) -->
+                <RadioGroup
+                    android:id="@+id/radioGroupRol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbDueno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="8dp"
+                        android:button="@drawable/bg_radio_selector"
+                        android:text="@string/Dueño"
+                        android:textColor="#5D123A"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbColaborador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/bg_radio_selector"
+                        android:text="@string/Colaborador"
+                        android:textColor="#5D123A"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbRefugio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/bg_radio_selector"
+                        android:text="@string/Organización_o_refugio"
+                        android:textColor="#5D123A"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+                <!-- Botón Guardar movido al final -->
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#5D123A"
+                    android:text="@string/Guardar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
