@@ -54,7 +54,7 @@
         android:layout_width="236dp"
         android:layout_height="227dp"
         android:background="#FFFFFF"
-        android:src="@mipmap/logo_redhuellitas_nuevo__foreground"
+        android:src="@drawable/redhuellitas_logo"
         app:layout_constraintBottom_toTopOf="@id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

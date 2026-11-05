@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".LoginActivity">
 
     <TextView
@@ -47,10 +48,11 @@
         app:layout_constraintTop_toBottomOf="@id/tvTituloLogin" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/btnSoyAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Admin"
+        android:textColorLink="#707070"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -97,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/btnSoyAdmin"
         app:layout_constraintVertical_bias="0.313" />
 
     <Button

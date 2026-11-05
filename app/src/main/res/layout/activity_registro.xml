@@ -28,28 +28,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:padding="24dp"
-                android:gravity="center_horizontal">
+                android:padding="24dp">
 
                 <!-- Logo RedHuellitas -->
                 <ImageView
                     android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/logo_registro"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/logo_redhuellitas_nuevo_background"
-                    android:contentDescription="Logo" />
+                    android:src="@drawable/redhuellitas_logo" />
 
                 <!-- Avatar / Añade tu foto -->
                 <ImageView
+                    android:id="@+id/ivAvatar"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_circle_white"
+                    android:scaleType="centerCrop"
                     android:contentDescription="@string/Avatar"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_image"
-                    app:tint="#5D123A" />
+                    android:padding="2dp"
+                    android:src="@drawable/ic_image"/>
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -87,6 +90,7 @@
                         android:textColorHint="#646464"
                         android:textSize="14sp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -119,6 +123,7 @@
                         android:textColorHint="#646464"
                         android:textSize="14sp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -145,12 +150,13 @@
                         android:layout_height="50dp"
                         android:layout_marginStart="12dp"
                         android:background="@android:color/transparent"
-                        android:hint="Contraseña"
+                        android:hint="@string/contra"
                         android:inputType="textPassword"
                         android:textColor="#5D123A"
                         android:textColorHint="#8A8A8A"
                         android:textSize="14sp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -183,6 +189,7 @@
                         android:textColorHint="#8A8A8A"
                         android:textSize="14sp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"

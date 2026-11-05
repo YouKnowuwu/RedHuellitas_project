@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -15,6 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmail, etPassword;
     private Button btnLogin, btnRegistrate; // 1. Declarar el botón de registro
     private FirebaseFirestore db;
+    private TextView btnSoyAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegistrate = findViewById(R.id.btnRegistrate);
-
+        TextView btnSoyAdmin= findViewById(R.id.btnSoyAdmin);
         db = FirebaseFirestore.getInstance();
 
         btnLogin.setOnClickListener(v -> validarUsuario());
@@ -34,6 +36,13 @@ public class LoginActivity extends AppCompatActivity {
         btnRegistrate.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, registro.class);
             startActivity(intent);
+        });
+
+
+
+        btnSoyAdmin.setOnClickListener(v -> {
+                Intent intent = new Intent(LoginActivity.this, Admin_login.class);
+                startActivity(intent);
         });
     }
 

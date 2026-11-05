@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".Admin_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#364152"
+    android:padding="24dp">
+
+
+    <!-- Tarjeta contenedora blanca con bordes redondeados -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <!-- Logo de RedHuellitas -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/logo_admin"
+                android:src="@drawable/redhuellitas_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Campo Usuario (Ícono + EditText) -->
+            <ImageView
+                android:id="@+id/iconUser"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/user"
+                android:src="@drawable/ic_user"
+                app:layout_constraintBottom_toBottomOf="@+id/etUsuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="#592543" />
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="274dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="180dp"
+                android:backgroundTint="#6E7682"
+                android:hint="@string/usuario"
+                android:inputType="textPersonName"
+                android:textColor="#364152"
+                android:textColorHint="#9EA5B0"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iconUser"
+                app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+            <!-- Campo Contraseña (Ícono + EditText) -->
+            <ImageView
+                android:id="@+id/iconPassword"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="@string/ic_contraseña"
+                android:src="@android:drawable/ic_lock_lock"
+                app:layout_constraintBottom_toBottomOf="@+id/etContrasena"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="#592543" />
+
+            <EditText
+                android:id="@+id/etContrasena"
+                android:layout_width="276dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#6E7682"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColor="#364152"
+                android:textColorHint="#9EA5B0"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iconPassword"
+                app:layout_constraintTop_toBottomOf="@+id/etUsuario" />
+
+            <!-- Botón Ingresa -->
+            <Button
+                android:id="@+id/btnIngresa"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#364152"
+                android:text="@string/btn_ingresa"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:cornerRadius="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etContrasena" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

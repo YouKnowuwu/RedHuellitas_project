@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E3842"
+    android:fillViewport="true"
+    tools:context=".panel_admin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Tarjeta Blanca Central -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Logo RedHuellitas -->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/desc_logo"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/redhuellitas_logo" />
+
+                <!-- Título Panel de Administrador -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/Panel_de_administrador"
+                    android:textColor="#2E3842"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Perfil del Administrador (Avatar + Nombre + Rol) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivAvatarAdmin"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:contentDescription="@string/Avatar"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user"
+                        app:tint="#2E3842" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Administrador"
+                            android:textColor="#646464"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Botones de Gestión (Fila 1: Usuarios y Colaboradores) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnGestionarUsuarios"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#2E3842"
+                        android:text="@string/Gestionar_Usuarios"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                    <Button
+                        android:id="@+id/btnGestionarColaboradores"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#2E3842"
+                        android:text="@string/Gestionar_Colaboradores"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+
+                <!-- Botón Gestión (Fila 2: Gestionar Organizaciones) -->
+                <Button
+                    android:id="@+id/btnGestionarOrganizaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#2E3842"
+                    android:text="@string/Gestionar_Organizaciones"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+
+                <!-- Sección: Acciones Rápidas -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#2E3842"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/Acciones_Rápidas"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- Tarjeta interior blanca para las acciones rápidas -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="16dp">
+
+                                <!-- Acción 1: Actualizar mascota -->
+                                <LinearLayout
+                                    android:id="@+id/layoutActualizarMascota"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:contentDescription="Icono mascota"
+                                        android:src="@drawable/ic_image"
+                                        app:tint="#2E3842" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:gravity="center"
+                                        android:text="@string/Actualizar_mascota"
+                                        android:textColor="#2E3842"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <!-- Acción 2: Revisar reportes -->
+                                <LinearLayout
+                                    android:id="@+id/layoutRevisarReportes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:contentDescription="Icono reportes"
+                                        android:src="@drawable/ic_flag"
+                                        app:tint="#2E3842" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:gravity="center"
+                                        android:text="@string/Revisar_reportes"
+                                        android:textColor="#2E3842"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Botón: Configurar sistema -->
+                <Button
+                    android:id="@+id/btnConfigurarSistema"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="@string/Configurar_sistema"
+                    android:textAllCaps="false"
+                    android:textColor="#2E3842"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="#2E3842"
+                    app:strokeWidth="2dp" />
+
+                <!-- Botón: Inicio -->
+                <Button
+                    android:id="@+id/btnInicioAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="@string/Inicio"
+                    android:textAllCaps="false"
+                    android:textColor="#2E3842"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="#2E3842"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

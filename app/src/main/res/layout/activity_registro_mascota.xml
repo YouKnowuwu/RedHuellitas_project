@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1C4E9"
+    android:fillViewport="true"
+    tools:context=".registro_mascota">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Tarjeta blanca contenedora -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Logo superior pequeño -->
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/desc_logo"
+                    android:src="@drawable/redhuellitas_logo" />
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/Registra_a_tu_mascota"
+                    android:textColor="#5D123A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Círculo para la foto de la mascota -->
+
+                <!-- Campo: Nombre de la mascota -->
+
+                <ImageView
+                    android:id="@+id/ivAvatarMascota"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:clickable="true"
+                    android:contentDescription="@string/Foto_mascota"
+                    android:elevation="6dp"
+                    android:focusable="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_image"
+                    app:tint="#5D123A" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/Añade_su_foto"
+                    android:textColor="#5D123A"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/icono_pata"
+                        android:src="@drawable/ic_paw"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etNombreMascota"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:hint="Nombre de la mascota"
+                        android:inputType="textPersonName"
+                        android:padding="8dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Campo: Especie (Perro / Gato) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/icono_mascotas"
+                        android:src="@drawable/ic_pets"
+                        app:tint="#5D123A" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupEspecie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbPerro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:text="@string/perro"
+                            android:textColor="#5D123A" />
+
+                        <RadioButton
+                            android:id="@+id/rbGato"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Gato"
+                            android:textColor="#5D123A" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- Campo: Raza -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/icono_hueso"
+                        android:src="@drawable/ic_bone"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etRazaMascota"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:hint="Raza"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Campo: Edad -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/icono_calendario"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etEdadMascota"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:hint="Edad (Ej: 2 años)"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Campo: Descripción -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="@string/icono_hoja"
+                            android:src="@drawable/ic_page"
+                            app:tint="#5D123A" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Descripción"
+                            android:textColor="#5D123A"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etDescripcionMascota"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:gravity="top|start"
+                        android:hint="Ej: color, tamaño, manchas, características especiales, etc."
+                        android:inputType="textMultiLine"
+                        android:padding="12dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Botón Registrar Mascota -->
+                <Button
+                    android:id="@+id/btnRegistrarMascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#5D123A"
+                    android:text="@string/registar_mascota"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

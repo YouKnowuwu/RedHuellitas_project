@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5C2E0"
+    android:fillViewport="true"
+    tools:context=".registro_org">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Tarjeta Blanca Central -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Logo RedHuellitas -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/logo_registro"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/redhuellitas_logo" />
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/Registra_tu_organizacion"
+                    android:textColor="#5D123A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Avatar / Añade tu foto -->
+                <ImageView
+                    android:id="@+id/ivAvatarOrg"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:contentDescription="@string/Avatar"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/Añade_tu_foto"
+                    android:textColor="#5D123A"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Campo: Nombre organización o refugio -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/icono_casa"
+                        android:src="@drawable/ic_home"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etNombreOrg"
+                        android:layout_width="268dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/Nombre_organización"
+                        android:inputType="text"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#646464"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Opciones (RadioGroup en Horizontal para Organización / Refugio) -->
+                <RadioGroup
+                    android:id="@+id/radioGroupTipoOrg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbOrganizacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:button="@drawable/bg_radio_selector"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/Organización"
+                        android:textColor="#5D123A"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbRefugioOrg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:button="@drawable/bg_radio_selector"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/Refugio"
+                        android:textColor="#5D123A"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+                <!-- Campo: Dirección -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/Icono_dirección"
+                        android:src="@drawable/ic_flag"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etDireccionOrg"
+                        android:layout_width="269dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/Dirección"
+                        android:inputType="textPostalAddress"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#646464"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Campo: Teléfono -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/Icono_teléfono"
+                        android:src="@drawable/ic_phone"
+                        app:tint="#5D123A" />
+
+                    <EditText
+                        android:id="@+id/etTelefonoOrg"
+                        android:layout_width="279dp"
+                        android:layout_height="49dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/Teléfono"
+                        android:inputType="phone"
+                        android:textColor="#5D123A"
+                        android:textColorHint="#646464"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5D123A" />
+
+                <!-- Botón Guardar -->
+                <Button
+                    android:id="@+id/btnGuardarOrg"
+                    android:layout_width="243dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#5D123A"
+                    android:text="@string/Guardar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp" />
+
+                <!-- Botón Inicio -->
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
